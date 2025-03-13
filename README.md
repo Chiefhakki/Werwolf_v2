@@ -1,1 +1,3 @@
-# Werwolf_v2
+# Werwolf
+
+https://chiefhakki.github.io/Werwolf/

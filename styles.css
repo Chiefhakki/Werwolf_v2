@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin: 20px;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #FFD700; /* Gold-Gelb für einen Retro-Effekt */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Leichter Schatten für bessere Lesbarkeit */
+}
+
+h1.title {
+    color: #FFFFFF; /* Weiß für maximale Sichtbarkeit */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Stärkerer Schatten */
+    text-align: center; /* Ensure title is centered */
+    margin-top: 0; /* Remove top margin */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+}
+
+h2, h3 {
+    color: #FFFFFF; /* Weiß für maximale Sichtbarkeit */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Stärkerer Schatten */
+    text-align: center; /* Ensure all headings are centered */
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #8B0000; /* Dunkelrot für einen düsteren Retro-Vibe */
+    color: #FFD700; /* Gold-Gelb für Kontrast */
+    border: 2px solid #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#setup-screen, #admin-screen, #game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px); /* Adjust height to account for the title */
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#role-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#role-selection label {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#role-selection input {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    width: 50px;
+    text-align: center;
+}
+
+#admin-screen ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#admin-screen ul li {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px; /* Adjust font size to fit text within the boxes */
+    text-align: center;
+}
+
+#admin-screen ul li button {
+    align-self: center;
+    font-size: 12px; /* Adjust button font size to fit within the boxes */
+}
+
+#game-screen button {
+    width: 200px;
+}

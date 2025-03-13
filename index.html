@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Werwolf Spielleiter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="setup-screen">
+        <h1 class="title">Werwolf</h1> <!-- Ensure title is at the top -->
+        <h3>Wähle die Anzahl der Rollen:</h3>
+        <p id="total-role-count">Anzahl Spieler: 5</p> <!-- Default to 5 players -->
+        <div id="role-selection"></div>
+        
+        <button onclick="startGame()">Spiel starten</button>
+    </div>
+    
+    <div id="game-screen" style="display:none;">
+        <h2 id="player-name">Spieler 1, schau deine Rolle an</h2>
+        <button onclick="revealRole()">Rolle anzeigen</button>
+        <p id="role-display" style="display:none;"></p>
+        <button onclick="hideRole()" style="display:none;">Weitergeben</button>
+    </div>
+
+    <div id="admin-screen" style="display:none;">
+        <h2>Spielübersicht</h2>
+        <ul id="player-list"></ul>
+        <button onclick="resetGame()">Neues Spiel</button>
+    </div>
+
+    <script src="script.js"></script>
+    <audio id="wolfSound" src="wolf-howl-268619.mp3"></audio>
+    <audio id="menschenSound" src="menschen_sound.mp3"></audio>
+    <audio id="jaegerSound" src="Jaeger_Sound.mp3"></audio>
+</body>
+</html>
