@@ -149,6 +149,28 @@ function expandPlayerView(id) {
     let player = players.find(p => p.id === expandedPlayer);
     let adminScreen = document.getElementById('admin-screen');
     
+    // Set the background image based on the player's role
+    let body = document.body;
+    switch (player.role) {
+        case 'Werwolf':
+            body.style.backgroundImage = "url('Wolf.webp')";
+            break;
+        case 'Bürger':
+            body.style.backgroundImage = "url('Buerger.webp')";
+            break;
+        case 'Hexe':
+            body.style.backgroundImage = "url('Hexe.webp')";
+            break;
+        case 'Wahrsager':
+            body.style.backgroundImage = "url('Wahrsager.webp')";
+            break;
+        case 'Jäger':
+            body.style.backgroundImage = "url('Jaeger.webp')";
+            break;
+        default:
+            body.style.backgroundImage = "url('background.png')";
+    }
+
     adminScreen.innerHTML = `
         <h2 style="font-size: 32px; color: red;">Spieler ${player.id} wurde eliminiert!</h2>
         <p style="font-size: 28px; font-weight: bold;">Rolle: ${player.role}</p>
@@ -161,6 +183,7 @@ function expandPlayerView(id) {
 
 function collapsePlayerView() {
     expandedPlayer = null;
+    document.body.style.backgroundImage = "url('background.png')";
     displayAdminView();
 }
 
@@ -192,8 +215,33 @@ function toggleElimination(id) {
             if (playPromise !== undefined) {
                 playPromise.catch(error => console.error('Sound konnte nicht abgespielt werden:', error));
             }
+
+            // Set the background image based on the player's role
+            let body = document.body;
+            switch (player.role) {
+                case 'Werwolf':
+                    body.style.backgroundImage = "url('Wolf.webp')";
+                    break;
+                case 'Bürger':
+                    body.style.backgroundImage = "url('Buerger.webp')";
+                    break;
+                case 'Hexe':
+                    body.style.backgroundImage = "url('Hexe.webp')";
+                    break;
+                case 'Wahrsager':
+                    body.style.backgroundImage = "url('Wahrsager.webp')";
+                    break;
+                case 'Jäger':
+                    body.style.backgroundImage = "url('Jaeger.webp')";
+                    break;
+                default:
+                    body.style.backgroundImage = "url('background.png')";
+            }
         }
     }
+
+    // Reset the background image to background.png immediately after elimination
+    document.body.style.backgroundImage = "url('background.png')";
 
     players = players.map(p => p.id === id ? { ...p, eliminated: newState } : p);
     saveGameState();
