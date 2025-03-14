@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <style>
+        body {
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
     <div id="setup-screen">
         <h1 class="title">Werwolf</h1> <!-- Ensure title is at the top -->
         <h3>Wähle die Anzahl der Rollen:</h3>
@@ -20,6 +26,7 @@
         <h2 id="player-name">Spieler 1, schau deine Rolle an</h2>
         <button onclick="revealRole()">Rolle anzeigen</button>
         <p id="role-display" style="display:none;"></p>
+        <img id="role-image" style="display:none; max-width: 100%; height: auto;" />
         <button onclick="hideRole()" style="display:none;">Weitergeben</button>
     </div>
 
