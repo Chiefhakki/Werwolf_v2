@@ -96,34 +96,8 @@ function revealRole() {
     document.querySelector("button[onclick='hideRole()']").style.display = 'block';
     document.querySelector("button[onclick='revealRole()']").style.display = 'none';
 
-    let roleImage = document.getElementById('role-image');
     let body = document.body;
-    switch (role) {
-        case 'Bürger':
-            roleImage.src = 'Buerger.webp';
-            body.style.backgroundImage = "url('Buerger_background.jpg')";
-            break;
-        case 'Hexe':
-            roleImage.src = 'Hexe.webp';
-            body.style.backgroundImage = "url('Hexe_background.jpg')";
-            break;
-        case 'Werwolf':
-            roleImage.src = 'Wolf.webp';
-            body.style.backgroundImage = "url('Werwolf_background.jpg')";
-            break;
-        case 'Wahrsager':
-            roleImage.src = 'Wahrsager.webp';
-            body.style.backgroundImage = "url('Wahrsager_background.jpg')";
-            break;
-        case 'Jäger':
-            roleImage.src = 'Jaeger.webp';
-            body.style.backgroundImage = "url('Jaeger_background.jpg')";
-            break;
-        default:
-            roleImage.src = '';
-            body.style.backgroundImage = '';
-    }
-    roleImage.style.display = 'block';
+    body.style.backgroundImage = "url('background.png')";
 
     saveGameState();  
 }
@@ -131,7 +105,7 @@ function revealRole() {
 function hideRole() {
     let body = document.body;
     body.style.backgroundImage = "url('background.png')";
-    document.getElementById('role-image').style.display = 'none';
+    document.getElementById('role-display').style.display = 'none';
     currentPlayerIndex++;
     saveGameState();  
     updatePlayerView();
